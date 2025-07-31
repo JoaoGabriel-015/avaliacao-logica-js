@@ -1,5 +1,3 @@
-// script.js
-
 const alunos = [];
 
 const inputNome = document.getElementById('nome');
@@ -26,7 +24,7 @@ btnCadastrar.addEventListener('click', () => {
         return;
     }
 
-    // Verifica se todas as notas são números válidos entre 0 e 10
+    
     for (let i = 0; i < notas.length; i++) {
         if (isNaN(notas[i]) || notas[i] < 0 || notas[i] > 10) {
             alert(`Por favor, insira uma nota válida entre 0 e 10 para o ${i+1}º bimestre.`);
@@ -34,10 +32,10 @@ btnCadastrar.addEventListener('click', () => {
         }
     }
 
-    // Calcula média
+    
     const media = notas.reduce((acc, n) => acc + n, 0) / notas.length;
 
-    // Define status
+    
     let status = '';
     if (media >= 7) {
         status = 'Aprovado';
@@ -47,19 +45,19 @@ btnCadastrar.addEventListener('click', () => {
         status = 'Reprovado';
     }
 
-    // Verifica se aluno já está cadastrado (mesmo nome)
+    
     const alunoExistente = alunos.find(aluno => aluno.nome.toLowerCase() === nome.toLowerCase());
     if (alunoExistente) {
         alert('Aluno já cadastrado.');
         return;
     }
 
-    // Adiciona aluno à lista
+    
     alunos.push({ nome, notas, media, status });
 
     alert(`Aluno ${nome} cadastrado com sucesso! Status: ${status}`);
 
-    // Limpa campos
+    
     inputNome.value = '';
     inputPrimeiro.value = '';
     inputSegundo.value = '';
@@ -73,10 +71,10 @@ btnRelatorio.addEventListener('click', () => {
         return;
     }
 
-    // Limpa a lista
+    
     listaAlunos.innerHTML = '';
 
-    // Ordena alunos por nome
+    
     alunos.sort((a, b) => a.nome.localeCompare(b.nome));
 
     alunos.forEach(aluno => {
