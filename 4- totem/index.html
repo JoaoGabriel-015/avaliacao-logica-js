@@ -1,0 +1,65 @@
+<!DOCTYPE html>  
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="visual.css" />
+    <script src="script.js" defer></script>
+    <link rel="shortcut icon" href="./img/logo.svg" type="image/x-icon" />
+    <title>Lanchonete Tech4me</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <img src="./img/logo.svg" />
+    </header>
+
+    <main>
+        <article class="resumo">
+            <header>
+                <div> 
+                    <h1>Boas vindas</h1>
+                    <p class="texto-destaque">Lanchonete da tech4me!</p>
+                </div>
+            </header>
+        </article>
+
+        <article class="formulario">
+            <header>
+                <h1>Escolha seu lanche favorito</h1>
+            </header>
+
+            <form id="pedidoForm">
+                <select name="sanduiche" id="sanduiche">
+                    <option value="" disabled selected>Selecionar</option>
+                    <option value="frango" data-preco="10">R$10,00 Hamburguer</option>
+                    <option value="carne" data-preco="15">R$15,00 Cheeseburguer</option>
+                    <option value="atum" data-preco="21">R$21,00 Cheesebacon</option>
+                    <option value="ovo" data-preco="20">R$20,00 Duplo Cheeseburguer</option>
+                </select>
+
+                <button type="button" id="btnAcompanhamentos">Acompanhamentos</button>
+
+                <div id="acompanhamentosContainer" style="display:none; margin-top:1rem;">
+                    <p>Selecione até 5 acompanhamentos (R$ 2,00 cada):</p>
+                    <label><input type="checkbox" name="acompanhamento" value="Maionese" /> Maionese</label><br />
+                    <label><input type="checkbox" name="acompanhamento" value="Carne" /> Carne</label><br />
+                    <label><input type="checkbox" name="acompanhamento" value="Queijo" /> Queijo</label><br />
+                    <label><input type="checkbox" name="acompanhamento" value="Bacon" /> Bacon</label><br />
+                    <label><input type="checkbox" name="acompanhamento" value="Salada" /> Salada</label><br />
+                </div>
+
+                <button type="button" id="btnFinalizar" style="margin-top:1rem;">Finalizar</button>
+            </form>
+        </article>
+
+        <section>
+            <p class="texto-destaque marcado-de-verde" id="pedidoResumo" style="white-space: pre-line;"></p>
+            <p class="texto-destaque marcado-de-verde">Seu total foi de R$<mark id="total"></mark></p>
+        </section>
+    </main>
+</body>
+
+</html>

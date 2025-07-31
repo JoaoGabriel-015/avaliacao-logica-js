@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="visual.css" />
+    <script src="script.js" defer></script>
+    <title>Calculadora de notas</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <img src="./img/logo.png" />
+    </header>
+
+    <main>
+        <article class="resumo">
+            <header>
+                <div>
+                    <h1>Boas vindas</h1>
+                    <p class="texto-destaque">Calcule aqui a nota dos seus alunos!</p>
+                </div>
+            </header>
+        </article>
+
+        <article class="formulario">
+            <header>
+                <h1>Preencha com suas notas em cada bimestre</h1>
+            </header>
+
+            <form id="formNotas" onsubmit="return false;">
+                <input type="text" id="nome" placeholder="Nome do aluno" />
+                <input type="number" id="primeiro" placeholder="1º Bimestre" min="0" max="10" step="0.1" />
+                <input type="number" id="segundo" placeholder="2º Bimestre" min="0" max="10" step="0.1" />
+                <input type="number" id="terceiro" placeholder="3º Bimestre" min="0" max="10" step="0.1" />
+                <input type="number" id="quarto" placeholder="4º Bimestre" min="0" max="10" step="0.1" />
+                <button type="button" id="btnCadastrar">Cadastrar</button>
+                <button type="button" id="btnRelatorio">Relatório</button>
+            </form>
+        </article>
+
+        <section>
+            <p class="texto-destaque marcado-de-verde">Relatório:</p>
+            <ol id="lista_alunos"></ol>
+        </section>
+    </main>
+</body>
+
+</html>

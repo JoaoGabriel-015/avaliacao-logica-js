@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="visual.css" />
+  <link rel="shortcut icon" href="./img/Logo.svg" type="image/x-icon" />
+  <title>Feira de produtos</title>
+</head>
+
+<body>
+  <header class="cabecalho">
+    <img src="./img/Logo.svg" />
+  </header>
+
+  <main>
+    <article class="resumo">
+      <header>
+        <div>
+          <h1>Boas vindas</h1>
+          <p class="texto-destaque">Feira de produtos</p>
+        </div>
+      </header>
+    </article>
+
+    <article class="formulario">
+      <header>
+        <h1>Preencha com o valor da venda</h1>
+      </header>
+
+      <form>
+        <input type="number" id="venda" placeholder="Valor total da venda" />
+        <select name="pagamento" id="pagamento">
+          <option value="" disabled selected>Selecionar</option>
+          <option value="avista">À Vista</option>
+          <option value="cartao">Cartão</option>
+          <option value="qrcode">QR Code</option>
+        </select>
+        <button type="button" id="btnCalcular">Calcular</button>
+      </form>
+    </article>
+
+    <section>
+      <p class="texto-destaque marcado-de-verde">Valor original: <mark id="valor_original">R$ 0,00</mark></p>
+      <p class="texto-destaque marcado-de-verde">Desconto aplicado: <mark id="valor_desconto">R$ 0,00</mark></p>
+      <p class="texto-destaque marcado-de-verde">Valor final: <mark id="valor_final">R$ 0,00</mark></p>
+      <p class="texto-destaque marcado-de-verde" id="status_venda"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
