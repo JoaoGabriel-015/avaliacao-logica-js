@@ -1,5 +1,3 @@
-// script.js
-
 const convidados = [];
 
 const inputConvidado = document.getElementById('convidado');
